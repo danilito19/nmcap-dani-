@@ -1,0 +1,33 @@
+body {
+    padding-left: 20px;
+    font-family: 'Roboto';
+
+}
+
+.table th { 
+	font-size: 16px;
+	color: red;
+
+/*th.asc {
+    background: url("arrow-up.gif/") no-repeat scroll right 0.4em transparent;
+}
+
+th.desc {
+    background: url("arrow-down.gif/") no-repeat scroll right 0.4em transparent;
+}*/
+
+}
+
+thead a {
+	color: black;
+}
+
+tbody tr:nth-child(even){
+background-color: white;
+
+}
+
+tbody tr:nth-child(odd){
+background-color: #b3dad9;
+}
+

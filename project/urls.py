@@ -18,4 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'', include('capproj.urls')), #includes urls from capproj app, redirects localhost/8000
+
 ]
