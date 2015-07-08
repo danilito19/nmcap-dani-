@@ -1,25 +1,24 @@
-
-
 .filters li {
-  border-width: 2px;
+  border-width: 1px;
   border-style: solid;
+  padding: 4px;
+  margin: 5px;
   display: inline;
+  color: black;
+}
+
+.filters li a {
+  color: red;
 }
 
 
-
-}
-
-.filters li #text:active {
+.filters li:active {
+  background-color: #626f84;
   color: white;
+
 }
 
-.filterOptions ul{ 
-  border-width: 2px;
-  border-style: solid;
-  display: inline;
-}
-.filterOptions li{
+.filterSelections li{
   text-decoration: none;
   list-style-type: disc;
   display: inline;
@@ -28,10 +27,6 @@
   padding-bottom: 6px;
   position: relative;
 }
-
-
-
-
 
 
 

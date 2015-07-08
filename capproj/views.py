@@ -36,9 +36,6 @@ def search(request):
       project_name = request.GET.get('q', None)
       if project_name:
         kwargs['approp_title__contains'] = project_name
-      # kwargs = {
-      #   'approp_title__contains': request.GET.get('q')
-      # }
 
       year = request.GET.get('year', None)
       if year:
@@ -62,6 +59,4 @@ def search(request):
            pretty_results(years), 'counties': pretty_results(counties),
            'searchPath': request.get_full_path(), 'basePath': request.build_absolute_uri('/')})
 
-
       break
-  # if 'q' in request.GET and request.GET['q']:
