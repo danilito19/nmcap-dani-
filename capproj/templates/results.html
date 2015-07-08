@@ -1,11 +1,16 @@
+{% extends 'base.html' %}
 {% load django_tables2 %}
-{% if results_table %}
-  {% render_table results_table %}
 
-{% else %}
-    <h3 class='error'>No projects with that name</h3>
-    <form method="get" action="/search/">
-      Search:<input type="text" name="q" id="id_q" value="{{ query }}"/>
-      <input type="submit" value="Search" />
-    </form>
-{% endif %}
+{% block content %}
+  {% if projects %}
+    {% include '_search.html' %}
+    {% include '_results_filter.html' %}
+    {% include '_table.html' %}
+  {% else %}
+      <h3 class='error'>No projects with that name</h3>
+      <form method="get" action="/search/">
+        Search:<input type="text" name="q" id="id_q" value="{{ query }}"/>
+        <input type="submit" value="Search" />
+      </form>
+  {% endif %}
+{% endblock content %}

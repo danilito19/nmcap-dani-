@@ -1,0 +1,36 @@
+<div class="filters">
+  <h2>Filter</h2>
+  <ul>
+    <li id="yearFilter">Year</li>
+    <li id="countyFilter">County</li>
+    <li id="amountFilter">Expended Amount</li>
+  </ul>
+</div>
+<div class="filterSelections">
+  <ul id="yearFilterSelections">
+    {% for year in years %}
+    <li><a href="{{ searchPath }}&year={{ year }}">{{ year }}</a></li>
+    <!-- '/search/?q=FAFSA+EFC' -->
+    {% endfor %}
+  </ul>
+  <ul id="countyFilterSelections">
+    {% for county in counties %}
+    <li>{{ county }}</li>
+    {% endfor %}
+  </ul>
+  <ul id="amountFilterSelections">
+    Amount from
+    <input type="text" name="q" id="id_q" value="{{ query }}" /> to
+    <input type="text" name="q" id="id_q" value="{{ query }}" />
+    <input type="submit" value="Search" />
+  </ul>
+</div>
+<!--       <span class="field">
+      <span class="label"><label for="order">Sort by </label></span>
+      <span class="input"><select id="order" name="order" tabindex="7"><option value="0">Year</option>
+      <option value="1">County</option>
+      <option value="2">Expended Amount</option></select></span>
+      </span>
+
+
+</div> -->

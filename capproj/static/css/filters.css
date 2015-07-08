@@ -1,0 +1,37 @@
+
+
+.filters li {
+  border-width: 2px;
+  border-style: solid;
+  display: inline;
+}
+
+
+
+}
+
+.filters li #text:active {
+  color: white;
+}
+
+.filterOptions ul{ 
+  border-width: 2px;
+  border-style: solid;
+  display: inline;
+}
+.filterOptions li{
+  text-decoration: none;
+  list-style-type: disc;
+  display: inline;
+  width: 156px;
+  margin: 7px 13px 0;
+  padding-bottom: 6px;
+  position: relative;
+}
+
+
+
+
+
+
+
