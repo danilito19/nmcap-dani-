@@ -19,7 +19,7 @@ def pretty_results(input_array):
 
 
 def projects(request):
-  projects = ProjectsTable(Projects.objects.all().defer('email'))
+  projects = ProjectsTable(Projects.objects.all())
   RequestConfig(request, paginate={"per_page": 100}).configure(projects)
   return render(request, "projects.html", {"projects": projects, 'years':
            pretty_results(years), 'counties': pretty_results(counties),
@@ -50,7 +50,7 @@ def search(request):
         kwargs['expended_amount'] = expended_amount
 
       results = Projects.objects.filter(**kwargs)
-      results_table = ProjectsTable(results.defer('email'))
+      results_table = ProjectsTable(results)
       RequestConfig(request, paginate={"per_page": 100}).configure(results_table)
       
 
